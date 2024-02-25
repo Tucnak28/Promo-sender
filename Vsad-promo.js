@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-
+    const token = '';
     const max = 3000;
     const min = 1800;
     var textInterval = Math.random() * (max - min) + min;
@@ -101,7 +101,7 @@
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', 'https://modplay.cbcap.cz/capi/v2-onling/Bonuses/UseCode?code=' + encodeURIComponent(text) + '&playerId=2000221321');
                     xhr.setRequestHeader('Content-Type', 'application/json');
-                    xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFwcGxpY2F0aW9uUGxheWVyIiwiY2FwaV9wbGF0Zm9ybSI6Ik9ubGluZSIsImNhcGlfc2NvcGUiOiJTbG90cyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg5NjIyNzksImlhdCI6MTcwODc4OTQ3OSwibmJmIjoxNzA4Nzg5NDc5LCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIwMDAyMjEzMjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBcHBsaWNhdGlvblBsYXllciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjU4YzBjNGI2LWVmOWEtNGFhZi1iMjYxLTVjZWY2OTMwODQ4MyJ9.NIqYSSCfp4-NPAZ7igWOCco46GCSZMFzyCmP1UUnpf4');
+                    xhr.setRequestHeader('Authorization', token);
                     xhr.send();
                 }
                 index++;
