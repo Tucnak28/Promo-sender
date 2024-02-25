@@ -7,11 +7,14 @@
 // @match        https://www.vsadahrej.cz/bonuses
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=vsadahrej.cz
 // @grant        none
+// @downloadURL https://update.greasyfork.org/scripts/488262/Vsad%20a%20Hrej%20Bonus%20sender.user.js
+// @updateURL https://update.greasyfork.org/scripts/488262/Vsad%20a%20Hrej%20Bonus%20sender.meta.js
 // ==/UserScript==
 
 (function() {
     'use strict';
     const token = '';
+    const playerID = 0;
     const max = 3000;
     const min = 1800;
     var textInterval = Math.random() * (max - min) + min;
@@ -99,7 +102,7 @@
                     logToDump(text);
                     // Send the text in a packet
                     var xhr = new XMLHttpRequest();
-                    xhr.open('POST', 'https://modplay.cbcap.cz/capi/v2-onling/Bonuses/UseCode?code=' + encodeURIComponent(text) + '&playerId=2000221321');
+                    xhr.open('POST', 'https://modplay.cbcap.cz/capi/v2-onling/Bonuses/UseCode?code=' + encodeURIComponent(text) + '&playerId=' + playerID);
                     xhr.setRequestHeader('Content-Type', 'application/json');
                     xhr.setRequestHeader('Authorization', token);
                     xhr.send();
