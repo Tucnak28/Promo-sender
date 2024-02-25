@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Vsad a Hrej Bonus sender
 // @namespace    http://tampermonkey.net/
-// @version      2024-02-24
+// @version      2024-02-24/2
 // @description  let's you send promo codes and tell if they are right or wrong
 // @author       You
 // @match        https://www.vsadahrej.cz/bonuses
